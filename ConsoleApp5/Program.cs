@@ -34,10 +34,9 @@ namespace ConsoleApp1
                 menu.AppendLine("17: Decimal to Factorial Number System");
                 menu.AppendLine("18: Arithmetic across systems");
                 menu.AppendLine("19: Convert decimal doubles to binary");
-                menu.AppendLine("20: Shift integer left");
-                menu.AppendLine("21: Shift integer right");
+                menu.AppendLine("20: Shift integer");
+                menu.AppendLine("21: Median Operations");
                 menu.AppendLine("'exit' to quit:");
-                
                 Console.WriteLine(menu.ToString());
 
                 //selector
