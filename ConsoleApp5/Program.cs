@@ -10,6 +10,8 @@ namespace ConsoleApp5
         public static void Main(string[] args)
         {
             Menu();
+
+            ViewsResult.WaitUntilKeypress();
         }
 
         public static void Menu()
@@ -53,7 +55,7 @@ namespace ConsoleApp5
 
                 if (input.Equals("exit", StringComparison.OrdinalIgnoreCase))
                 {
-                    break;
+                    Environment.Exit(0);
                 }
 
                 if (!int.TryParse(input, out int choice))
