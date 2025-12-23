@@ -9,7 +9,7 @@ namespace ConsoleApp1
     {
         public static void AASOForward()
         {
-            Console.Write("Choose number system (binary(1), decimal(2), hex(3), octal(4), roman(5), base-N(6), unary(7), duodecimal(8), vigesimal(9), balanced ternary(10), bijective base-26(11), negabinary(12), factorial(13)): ");
+            Console.Write("Choose number syste:m \n(binary(1), \ndecimal(2), \nhex(3), \noctal(4), \nroman(5), \nbase-N(6), \nunary(7), \nduodecimal(8), \nvigesimal(9), \nbalanced ternary(10), \nbijective base-26(11), \nnegabinary(12), \nfactorial(13)): ");
 
             string system = Console.ReadLine().ToLower();
 
