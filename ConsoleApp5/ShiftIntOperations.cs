@@ -10,8 +10,8 @@ namespace ConsoleApp1
         public static void SIO()
         {
             Console.WriteLine("whats the int?");
-            int a = int.Parse(Console.ReadLine());
-
+            int a = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {a}");
+            Console.WriteLine($"You entered: {a}");
             if (a == 0)
             {
                 Console.WriteLine("Binary: 0");
@@ -23,7 +23,7 @@ namespace ConsoleApp1
                 char c = Console.ReadLine().ToUpper()[0];
 
                 Console.Write("Enter number of positions to shift: ");
-                int shift = int.Parse(Console.ReadLine());
+                int shift = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {shift}");
 
                 int shifted;
                 if (c == 'R')

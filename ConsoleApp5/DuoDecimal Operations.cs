@@ -10,7 +10,8 @@ namespace ConsoleApp1
         public static void DuodecimalForward()
         {
             Console.Write("Enter decimal number: ");
-            int num12 = int.Parse(Console.ReadLine());
+            int num12 = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {num12}");
+            Console.WriteLine($"You entered: {num12}");
             Console.WriteLine($"Steps to convert {num12} to duodecimal (base 12):");
             if (num12 == 0) Console.WriteLine("Duodecimal: 0");
             else

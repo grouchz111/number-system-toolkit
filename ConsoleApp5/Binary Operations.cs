@@ -7,7 +7,7 @@ namespace ConsoleApp1
         public static void ConvertToBinaryForward()
         {
             Console.Write("Enter a number: ");
-            int a = int.Parse(Console.ReadLine());
+            int a = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {a}");
 
             string binary = "";
 

@@ -10,7 +10,8 @@ namespace ConsoleApp1
         public static void DDTBOForward()
         {
             Console.Write("Enter a decimal number (use ','!): ");
-            double decimalNumber = Convert.ToDouble(Console.ReadLine());
+            double decimalNumber = InputHelper.ReadDouble("Enter decimal number: "); Console.WriteLine($"You entered: {decimalNumber}");
+            Console.WriteLine($"You entered: {decimalNumber}");
 
             int integerPart = (int)Math.Floor(decimalNumber);
             double fractionalPart = decimalNumber - integerPart;

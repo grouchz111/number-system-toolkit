@@ -7,7 +7,8 @@ namespace ConsoleApp1
         public static void OctalForward()
         {
             Console.Write("Enter a decimal number to convert to octal: ");
-            int decimalNum = int.Parse(Console.ReadLine());
+            int decimalNum = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {decimalNum}");
+            Console.WriteLine($"You entered: {decimalNum}");
             int original = decimalNum;
             string octal = "";
             Console.WriteLine($"Steps to convert {original} to octal:");

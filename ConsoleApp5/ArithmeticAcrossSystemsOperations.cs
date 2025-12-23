@@ -77,7 +77,7 @@ namespace ConsoleApp1
             else if (system == "6") // Base-N (2–36)
             {
                 Console.Write("Enter the base (2–36): ");
-                int baseN = int.Parse(Console.ReadLine());
+                int baseN = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {baseN}");
                 a = Convert.ToInt32(num1.ToUpper(), baseN);
                 b = Convert.ToInt32(num2.ToUpper(), baseN);
                 Console.WriteLine($"Converted {num1} (base-{baseN}) to {a} and {num2} (base-{baseN}) to {b} (decimal)");

@@ -10,7 +10,8 @@ namespace ConsoleApp1
         public static void RomanForward()
         {
             Console.Write("Enter a decimal number to convert to Roman: ");
-            int number = int.Parse(Console.ReadLine());
+            int number = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {number}");
+            Console.WriteLine($"You entered: {number}");
             string roman = "";
 
             var map = new Dictionary<int, string> {

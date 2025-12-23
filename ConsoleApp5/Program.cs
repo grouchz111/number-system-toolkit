@@ -43,9 +43,8 @@ namespace ConsoleApp1
                 //selector
                 string input = Console.ReadLine();
 
-                if (input?.ToLower() == "exit")
+                if (input.ToLower() == "exit")
                 {
-                    Console.WriteLine("Exiting program...");
                     break;
                 }
 

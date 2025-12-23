@@ -12,7 +12,8 @@ namespace ConsoleApp1
             {
 
                 Console.Write("Enter decimal number to convert to factorial number system: ");
-                int n = int.Parse(Console.ReadLine());
+                int n = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {n}");
+                Console.WriteLine($"You entered: {n}");
                 if (n == 0) { Console.WriteLine("Factorial system: 0"); }
                 else
                 {

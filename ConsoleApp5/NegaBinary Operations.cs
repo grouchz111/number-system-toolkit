@@ -10,7 +10,8 @@ namespace ConsoleApp1
         public static void Forward()
         {
             Console.Write("Enter decimal number to convert to negabinary (base -2): ");
-            int n = int.Parse(Console.ReadLine());
+            int n = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {n}");
+            Console.WriteLine($"You entered: {n}");
             if (n == 0) { Console.WriteLine("Negabinary: 0"); }
             else
             {

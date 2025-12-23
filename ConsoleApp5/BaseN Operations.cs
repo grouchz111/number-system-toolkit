@@ -10,9 +10,9 @@ namespace ConsoleApp1
         public static void NForward()
         {
             Console.Write("Enter a decimal number: ");
-            int number = int.Parse(Console.ReadLine());
+            int number = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {number}");
             Console.Write("Enter target base (2–36): ");
-            int baseN = int.Parse(Console.ReadLine());
+            int baseN = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {baseN}");
 
             const string digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -39,7 +39,7 @@ namespace ConsoleApp1
             Console.Write("Enter a number in base-N: ");
             string inputNum = Console.ReadLine().ToUpper();
             Console.Write("Enter the base (2–36): ");
-            int baseN = int.Parse(Console.ReadLine());
+            int baseN = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {baseN}");
 
             const string digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

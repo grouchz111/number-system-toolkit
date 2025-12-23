@@ -13,7 +13,7 @@ namespace ConsoleApp1
             var median = Console.ReadLine();
             var numbers = median
                 .Split(new[] { ' ', ',', ';' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(s => int.Parse(s))
+                .Select(s => InputHelper.ReadInt(s))
                 .OrderBy(n => n)
                 .ToList();
 

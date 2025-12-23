@@ -10,7 +10,7 @@ namespace ConsoleApp1
         public static void BalancedTernaryForward()
         {
             Console.Write("Enter decimal number to convert to balanced ternary: ");
-            int n = int.Parse(Console.ReadLine());
+            int n = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {n}");
             if (n == 0) { Console.WriteLine("Balanced ternary: 0"); }
             else
             {

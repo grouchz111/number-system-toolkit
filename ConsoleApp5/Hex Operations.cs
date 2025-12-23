@@ -7,7 +7,8 @@ namespace ConsoleApp1
         public static void HexForward()
         {
             Console.Write("Enter decimal number: ");
-            int decimalNum = int.Parse(Console.ReadLine());
+            int decimalNum = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {decimalNum}");
+            Console.WriteLine($"You entered: {decimalNum}");
             int original = decimalNum;
             string hex = "";
 

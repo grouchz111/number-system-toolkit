@@ -10,9 +10,9 @@ namespace ConsoleApp1
         public static void VigesimalForward()
         {
             Console.Write("Enter decimal number: ");
-                    int num20 = int.Parse(Console.ReadLine());
-                    Console.WriteLine($"Steps to convert {num20} to vigesimal (base 20):");
-                    if (num20 == 0) Console.WriteLine("Vigesimal: 0");
+            int num20 = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {num20}");
+            Console.WriteLine($"You entered: {num20}");
+            if (num20 == 0) Console.WriteLine("Vigesimal: 0");
                     else
                     {
                         int temp = num20;
