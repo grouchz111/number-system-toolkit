@@ -27,6 +27,7 @@ namespace ConsoleApp1
                     temp /= 12;
                 }
                 Console.WriteLine("Duodecimal: " + res);
+                ViewsResult.WaitUntilKeypress();
             }
         }
     }

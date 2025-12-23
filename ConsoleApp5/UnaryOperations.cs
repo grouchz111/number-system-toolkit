@@ -13,6 +13,7 @@ namespace ConsoleApp1
             int n = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {n}");
             Console.WriteLine($"You entered: {n}");
             Console.WriteLine($"Unary (tally) for {n}: " + (n > 0 ? new string('|', n) : "0"));
+            ViewsResult.WaitUntilKeypress();
         }
     }
 }

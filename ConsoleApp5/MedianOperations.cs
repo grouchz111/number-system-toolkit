@@ -29,6 +29,7 @@ namespace ConsoleApp1
                 double mid3 = (mid1 + mid2) / 2.0;
                 Console.WriteLine($"Median:" + mid3);
             }
+            ViewsResult.WaitUntilKeypress();
         }
     }
 }

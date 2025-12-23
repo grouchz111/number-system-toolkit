@@ -230,6 +230,7 @@ namespace ConsoleApp1
             Console.WriteLine($"Result in binary: {Convert.ToString(result, 2)}");
             Console.WriteLine($"Result in octal: {Convert.ToString(result, 8)}");
             Console.WriteLine($"Result in hexadecimal: {Convert.ToString(result, 16).ToUpper()}");
+            ViewsResult.WaitUntilKeypress();
         }
     }
 }

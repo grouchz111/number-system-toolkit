@@ -57,7 +57,7 @@ namespace ConsoleApp1
 
                 Console.WriteLine($"\nBinary (fraction): {binaryFraction}");
                 Console.WriteLine($"\nFinal Binary: {binaryInteger}.{binaryFraction}");
-                Console.WriteLine("Press any key to exit...");
+                ViewsResult.WaitUntilKeypress();
                 Console.ReadKey();
             }
         }

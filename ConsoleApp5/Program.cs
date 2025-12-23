@@ -1,12 +1,18 @@
 ﻿using ConsoleApp1;
 using System;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace ConsoleApp5
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
+        {
+            Menu();
+        }
+
+        public static void Menu()
         {
             while (true)
             {
@@ -135,13 +141,14 @@ namespace ConsoleApp5
                 }
                 else if (choice == 20)
                 {
-                    ShiftIntOperations.SIO();
+                    IntShiftOperations.IntShiftMenu();
                 }
                 else if (choice == 21)
                 {
                     MedianOperations.MedianForward();
                 }
             }
+
         }
     }
 }

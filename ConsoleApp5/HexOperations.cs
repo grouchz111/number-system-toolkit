@@ -34,6 +34,7 @@ namespace ConsoleApp1
                 }
 
                 Console.WriteLine($"Hexadecimal: {hex}");
+                ViewsResult.WaitUntilKeypress();
             }
         }
         public static void HexBackward()
@@ -53,6 +54,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal: {decimalValue}");
+            ViewsResult.WaitUntilKeypress();
         }
     }
 }

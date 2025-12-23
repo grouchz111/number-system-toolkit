@@ -32,6 +32,7 @@ namespace ConsoleApp1
                     temp = quotient;
                 }
                 Console.WriteLine("Negabinary: " + sb.ToString());
+                ViewsResult.WaitUntilKeypress();
             }
         }
     }

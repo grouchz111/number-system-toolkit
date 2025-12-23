@@ -6,19 +6,17 @@ namespace ConsoleApp1
     {
         public static void IntShiftMenu()
         {
+            Console.WriteLine("Enter direction (R for Right, L for Left):");
+            char c = Console.ReadLine().ToUpper()[0];
+
             Console.WriteLine("What's the int?");
             int a = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {a}");
-            Console.WriteLine($"You entered: {a}");
 
             if (a == 0)
             {
                 Console.WriteLine("Binary: 0");
                 return;
             }
-
-            Console.WriteLine("Enter direction (R for Right, L for Left):");
-            char c = Console.ReadLine().ToUpper()[0];
-
             Console.Write("Enter number of positions to shift: ");
             int shift = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {shift}");
 
@@ -41,6 +39,7 @@ namespace ConsoleApp1
             int shifted = a << shift;
             Console.WriteLine($"{a} << {shift} = {shifted}");
             Console.WriteLine("Binary: " + Convert.ToString(shifted, 2));
+            ViewsResult.WaitUntilKeypress();
         }
 
         public static void IntShiftRight(int a, int shift)
@@ -48,6 +47,7 @@ namespace ConsoleApp1
             int shifted = a >> shift;
             Console.WriteLine($"{a} >> {shift} = {shifted}");
             Console.WriteLine("Binary: " + Convert.ToString(shifted, 2));
+            ViewsResult.WaitUntilKeypress();
         }
     }
 }

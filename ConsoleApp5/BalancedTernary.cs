@@ -31,6 +31,7 @@ namespace ConsoleApp1
                     sb.Insert(0, digit);
                 }
                 Console.WriteLine("Balanced ternary (T = -1): " + sb.ToString());
+                ViewsResult.WaitUntilKeypress();
             }
         }
     }

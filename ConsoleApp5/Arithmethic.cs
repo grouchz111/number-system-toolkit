@@ -30,24 +30,28 @@ namespace ConsoleApp1
                     a = Convert.ToInt32(num1, 2);
                     b = Convert.ToInt32(num2, 2);
                     Console.WriteLine($"Converted {num1} to {a} and {num2} to {b} (decimal)");
+                    ViewsResult.WaitUntilKeypress();
                 }
                 else if (system == "2")
                 {
                     a = Convert.ToInt32(num1, 10);
                     b = Convert.ToInt32(num2, 10);
                     Console.WriteLine($"Converted {num1} to {a} and {num2} to {b} (decimal)");
+                    ViewsResult.WaitUntilKeypress();
                 }
                 else if (system == "3")
                 {
                     a = Convert.ToInt32(num1, 16);
                     b = Convert.ToInt32(num2, 16);
                     Console.WriteLine($"Converted {num1} to {a} and {num2} to {b} (decimal)");
+                    ViewsResult.WaitUntilKeypress();
                 }
                 else if (system == "4")
                 {
                     a = Convert.ToInt32(num1, 8);
                     b = Convert.ToInt32(num2, 8);
                     Console.WriteLine($"Converted {num1} to {a} and {num2} to {b} (decimal)");
+                    ViewsResult.WaitUntilKeypress();
                 }
 
                 else if (system == "5") // Roman numerals
@@ -69,6 +73,7 @@ namespace ConsoleApp1
                                 total += value;
                         }
                         return total;
+                        ViewsResult.WaitUntilKeypress();
                     }
 
                     a = ParseRoman(num1);

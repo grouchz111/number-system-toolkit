@@ -32,6 +32,7 @@ namespace ConsoleApp1
                 }
 
                 Console.WriteLine($"Base-{baseN}: {(result == "" ? "0" : result)}");
+                ViewsResult.WaitUntilKeypress();
             }
         }
         public static void NBackward()
@@ -55,6 +56,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal: {result}");
+            ViewsResult.WaitUntilKeypress();
         }
     }
 }

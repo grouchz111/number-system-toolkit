@@ -27,6 +27,7 @@ namespace ConsoleApp1
                     temp /= 26;
                 }
                 Console.WriteLine("Bijective base-26: " + sb.ToString());
+                ViewsResult.WaitUntilKeypress();
             }
         }
     }

@@ -31,6 +31,7 @@ namespace ConsoleApp1
                     }
                     digitsFact.Reverse();
                     Console.WriteLine("Factorial representation (digits for 1!,2!,3!,...): " + string.Join("", digitsFact));
+                    ViewsResult.WaitUntilKeypress();
                 }
             }
             }
