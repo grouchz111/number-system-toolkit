@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class Duodecimal_Operations
+    class DuodecimalOperations
     {
         public static void DuodecimalForward()
         {

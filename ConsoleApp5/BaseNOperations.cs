@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class Base_N_Operations
+    class BaseNOperations
     {
         public static void NForward()
         {

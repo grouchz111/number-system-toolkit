@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class Unary_Operations
+    class UnaryOperations
     {
         public static void UnaryForward()
         {

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class NBinary_Operations
+    class NBinaryOperations
     {
         public static void Forward()
         {

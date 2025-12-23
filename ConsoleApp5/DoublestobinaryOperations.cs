@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class doublestobinary_operations
+    class DoublestobinaryOperations
     {
         public static void doublestobinaryBinForward()
         {

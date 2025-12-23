@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class Vigesimal_Operations
+    class VigesimalOperations
     {
         public static void VigesimalForward()
         {

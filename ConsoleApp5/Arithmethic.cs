@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class Aritmethic_operations
+    class AritmethicOperations
     {
         public static void AritmethicForward()
         {

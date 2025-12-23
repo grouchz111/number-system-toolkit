@@ -2,7 +2,7 @@
 
 namespace ConsoleApp1
 {
-    class Binary_Operations
+    class BinaryOperations
     {
         public static void ConvertToBinaryForward()
         {

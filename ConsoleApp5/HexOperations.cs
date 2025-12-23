@@ -2,7 +2,7 @@
 
 namespace ConsoleApp1
 {
-    class Hex_Operations
+    class HexOperations
     {
         public static void HexForward()
         {

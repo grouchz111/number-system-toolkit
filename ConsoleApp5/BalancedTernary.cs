@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class Balanced_Ternary_Operations
+    class BalancedTernaryOperations
     {
         public static void BalancedTernaryForward()
         {

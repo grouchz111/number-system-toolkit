@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class Roman_Operations
+    class RomanOperations
     {
         public static void RomanForward()
         {

@@ -1,10 +1,8 @@
-﻿using System;
+﻿using ConsoleApp1;
+using System;
 using System.Text;
-using System.Collections.Generic;
-using System.Linq;
 
-
-namespace ConsoleApp1
+namespace ConsoleApp5
 {
     class Program
     {
@@ -12,7 +10,7 @@ namespace ConsoleApp1
         {
             while (true)
             {
-                //Entry text
+                // Entry text
                 StringBuilder menu = new StringBuilder();
                 menu.AppendLine("\n Enter your choice:");
                 menu.AppendLine("1: Decimal to Binary");
@@ -39,10 +37,15 @@ namespace ConsoleApp1
                 menu.AppendLine("'exit' to quit:");
                 Console.WriteLine(menu.ToString());
 
-                //selector
+                // selector
                 string input = Console.ReadLine();
 
-                if (input.ToLower() == "exit")
+                if (input is null)
+                {
+                    continue;
+                }
+
+                if (input.Equals("exit", StringComparison.OrdinalIgnoreCase))
                 {
                     break;
                 }
@@ -52,62 +55,63 @@ namespace ConsoleApp1
                     Console.WriteLine("Invalid input. Please enter a number or 'exit'.");
                     continue;
                 }
-                //Selection blocks
+
+                // Selection blocks - unified PascalCase class names (filenames should match)
                 if (choice == 1)
                 {
-                    Binary_Operations.ConvertToBinaryForward();
+                    BinaryOperations.ConvertToBinaryForward();
                 }
                 else if (choice == 2)
                 {
-                    Binary_Operations.ConvertBinaryBackward();
+                    BinaryOperations.ConvertBinaryBackward();
                 }
                 else if (choice == 3)
                 {
-                    Hex_Operations.HexForward();
+                    HexOperations.HexForward();
                 }
                 else if (choice == 4)
                 {
-                    Hex_Operations.HexBackward();
+                    HexOperations.HexBackward();
                 }
                 else if (choice == 5)
                 {
-                    Octal_Operations.OctalForward();
+                    OctalOperations.OctalForward();
                 }
                 else if (choice == 6)
                 {
-                    Octal_Operations.OctalBackward();
+                    OctalOperations.OctalBackward();
                 }
                 else if (choice == 7)
                 {
-                    Roman_Operations.RomanForward();
+                    RomanOperations.RomanForward();
                 }
                 else if (choice == 8)
                 {
-                    Roman_Operations.RomanBackward();
+                    RomanOperations.RomanBackward();
                 }
                 else if (choice == 9)
                 {
-                    Base_N_Operations.NForward();
+                    BaseNOperations.NForward();
                 }
                 else if (choice == 10)
                 {
-                    Base_N_Operations.NBackward();
+                    BaseNOperations.NBackward();
                 }
                 else if (choice == 11)
                 {
-                    Unary_Operations.UnaryForward();
+                    UnaryOperations.UnaryForward();
                 }
                 else if (choice == 12)
                 {
-                    Duodecimal_Operations.DuodecimalForward();
+                    DuodecimalOperations.DuodecimalForward();
                 }
                 else if (choice == 13)
                 {
-                    Vigesimal_Operations.VigesimalForward();
+                    VigesimalOperations.VigesimalForward();
                 }
                 else if (choice == 14)
                 {
-                    Balanced_Ternary_Operations.BalancedTernaryForward();
+                    BalancedTernaryOperations.BalancedTernaryForward();
                 }
                 else if (choice == 15)
                 {
@@ -115,11 +119,11 @@ namespace ConsoleApp1
                 }
                 else if (choice == 16)
                 {
-                    NBinary_Operations.Forward();
+                    NBinaryOperations.Forward();
                 }
                 else if (choice == 17)
                 {
-                    Factorial_Operations.FactorialForward();
+                    FactorialOperations.FactorialBinForward();
                 }
                 else if (choice == 18)
                 {
@@ -136,17 +140,8 @@ namespace ConsoleApp1
                 else if (choice == 21)
                 {
                     MedianOperations.MedianForward();
-                    }
                 }
             }
         }
     }
-
-
-
-
-
-
-
-
-
+}
