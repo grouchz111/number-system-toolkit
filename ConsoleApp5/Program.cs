@@ -1,9 +1,8 @@
-﻿using ConsoleApp1;
-using System;
+﻿using System;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace ConsoleApp5
+namespace ConsoleApp1
 {
     class Program
     {
