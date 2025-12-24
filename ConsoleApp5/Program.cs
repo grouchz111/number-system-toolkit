@@ -63,90 +63,92 @@ namespace ConsoleApp1
                     continue;
                 }
 
-                // Selection blocks - unified PascalCase class names (filenames should match)
-                if (choice == 1)
+                // Selection blocks - unified PascalCase class names
+                switch (choice)
                 {
-                    BinaryOperations.ConvertToBinaryForward();
-                }
-                else if (choice == 2)
-                {
-                    BinaryOperations.ConvertBinaryBackward();
-                }
-                else if (choice == 3)
-                {
-                    HexOperations.HexForward();
-                }
-                else if (choice == 4)
-                {
-                    HexOperations.HexBackward();
-                }
-                else if (choice == 5)
-                {
-                    OctalOperations.OctalForward();
-                }
-                else if (choice == 6)
-                {
-                    OctalOperations.OctalBackward();
-                }
-                else if (choice == 7)
-                {
-                    RomanOperations.RomanForward();
-                }
-                else if (choice == 8)
-                {
-                    RomanOperations.RomanBackward();
-                }
-                else if (choice == 9)
-                {
-                    BaseNOperations.NForward();
-                }
-                else if (choice == 10)
-                {
-                    BaseNOperations.NBackward();
-                }
-                else if (choice == 11)
-                {
-                    UnaryOperations.UnaryForward();
-                }
-                else if (choice == 12)
-                {
-                    DuodecimalOperations.DuodecimalForward();
-                }
-                else if (choice == 13)
-                {
-                    VigesimalOperations.VigesimalForward();
-                }
-                else if (choice == 14)
-                {
-                    BalancedTernaryOperations.BalancedTernaryForward();
-                }
-                else if (choice == 15)
-                {
-                    BijectiveOperations.BijectiveForward();
-                }
-                else if (choice == 16)
-                {
-                    NBinaryOperations.Forward();
-                }
-                else if (choice == 17)
-                {
-                    FactorialOperations.FactorialBinForward();
-                }
-                else if (choice == 18)
-                {
-                    AritmethicAcrossSystemsOperations.AASOForward();
-                }
-                else if (choice == 19)
-                {
-                    DecimalDoublesToBinaryOperations.DDTBOForward();
-                }
-                else if (choice == 20)
-                {
-                    IntShiftOperations.IntShiftMenu();
-                }
-                else if (choice == 21)
-                {
-                    MedianOperations.MedianForward();
+                        case 1:
+                        BinaryOperations.ConvertToBinaryForward();
+                        break;
+
+                        case 2:
+                        BinaryOperations.ConvertBinaryBackward();
+                        break;
+                        
+                        case 3:
+                        HexOperations.HexForward();
+                        break;
+
+                        case 4:
+                        HexOperations.HexBackward();    
+                        break;
+
+                        case 5:
+                        OctalOperations.OctalForward();
+                        break;
+
+                        case 6:
+                        OctalOperations.OctalBackward();
+                        break;
+
+                        case 7:
+                        RomanOperations.RomanForward();
+                        break;
+
+                        case 8 :
+                        RomanOperations.RomanBackward();
+                        break;
+
+                        case 9:
+                        BaseNOperations.NForward();
+                        break;
+
+                        case 10:
+                        BaseNOperations.NBackward();
+                        break;
+
+                        case 11:
+                        UnaryOperations.UnaryForward();
+                        break;
+
+                        case 12:
+                        DuodecimalOperations.DuodecimalForward();
+                        break;
+
+                        case 13:
+                        VigesimalOperations.VigesimalForward();
+                        break;
+
+                        case 14:
+                        BalancedTernaryOperations.BalancedTernaryForward();
+                        break;
+
+                        case 15:
+                        BijectiveOperations.BijectiveForward();
+                        break;
+
+                        case 16:
+                        NBinaryOperations.Forward();
+                        break;
+
+                        case 17: 
+                        FactorialOperations.FactorialBinForward();
+                        break;
+
+                        case 18: 
+                        AritmethicAcrossSystemsOperations.AASOForward();  
+                        break;
+
+                        case 19: 
+                        DecimalDoublesToBinaryOperations.DDTBOForward();
+                        break;
+
+                        case 20: 
+                        IntShiftOperations.IntShiftMenu();
+                        break;
+
+                        case 21:
+                        MedianOperations.MedianForward();
+                        break;
                 }
             }
 
