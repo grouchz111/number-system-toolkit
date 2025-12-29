@@ -30,8 +30,7 @@ namespace ConsoleApp1
         }
         public static void OctalBackward()
         {
-            Console.Write("Enter an octal number to convert to decimal: ");
-            string octalInput = Console.ReadLine();
+            string octalInput = InputHelper.ReadString("Enter an octal number to convert to decimal: ");
             int decimalValue = 0;
             Console.WriteLine($"Steps to convert {octalInput} to decimal:");
 

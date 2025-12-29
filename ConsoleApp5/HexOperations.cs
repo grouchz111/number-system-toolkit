@@ -40,7 +40,7 @@ namespace ConsoleApp1
         public static void HexBackward()
         {
             Console.Write("Enter hexadecimal number: ");
-            string hexInput = Console.ReadLine().ToUpper();
+            string hexInput = InputHelper.ReadString("Enter hexadecimal number: ").ToUpper();
             int decimalValue = 0;
             Console.WriteLine($"Steps to convert {hexInput} to decimal:");
 

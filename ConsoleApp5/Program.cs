@@ -1,4 +1,5 @@
-﻿using System;
+﻿using name;
+using System;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -54,7 +55,7 @@ namespace ConsoleApp1
 
                 if (input.Equals("exit", StringComparison.OrdinalIgnoreCase))
                 {
-                    Environment.Exit(0);
+                    MenuClause.Exit(input);
                 }
 
                 if (!int.TryParse(input, out int choice))

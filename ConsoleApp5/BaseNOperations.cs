@@ -9,8 +9,8 @@ namespace ConsoleApp1
     {
         public static void NForward()
         {
-            Console.Write("Enter a decimal number: ");
-            int number = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {number}");
+            int number = InputHelper.ReadInt("Enter decimal number: ");
+            Console.WriteLine($"You entered: {number}");
             Console.Write("Enter target base (2–36): ");
             int baseN = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {baseN}");
 

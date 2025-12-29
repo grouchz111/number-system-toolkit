@@ -26,9 +26,9 @@ namespace ConsoleApp1
 
         public static void ConvertBinaryBackward()
         {
-            Console.Write("Enter a binary number to convert to decimal: ");
-            string binary = Console.ReadLine();
+            string binary = InputHelper.ReadString("Enter a binary number to convert to decimal: ");
             int decimalValue = 0;
+
             Console.WriteLine($"Steps to convert {binary} to decimal:");
 
             for (int i = 0; i < binary.Length; i++)

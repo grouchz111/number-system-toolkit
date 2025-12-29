@@ -1,4 +1,5 @@
-﻿using System;
+﻿using name;
+using System;
 
 namespace ConsoleApp1
 {
@@ -11,15 +12,17 @@ namespace ConsoleApp1
                 Console.Write(prompt);
                 string input = Console.ReadLine();
 
+                MenuClause.Exit(input);
+                MenuClause.Menu(input);
+
                 if (int.TryParse(input, out int result))
                 {
-                    return result; // success
+                    return result;
                 }
 
                 Console.WriteLine("Invalid input. Please enter a valid number.");
             }
         }
-
 
         public static double ReadDouble(string prompt)
         {
@@ -28,14 +31,32 @@ namespace ConsoleApp1
                 Console.Write(prompt);
                 string input = Console.ReadLine();
 
+                MenuClause.Exit(input);
+                MenuClause.Menu(input);
+
                 if (double.TryParse(input, out double result))
                 {
-                    return result; // success
+                    return result;
                 }
 
                 Console.WriteLine("Invalid input. Please enter a valid number.");
             }
         }
+            
+            public static string ReadString(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string input = Console.ReadLine();
+
+                MenuClause.Exit(input);
+                MenuClause.Menu(input);
+
+                return input;
+            }
+        }
+
     }
-    }
+}
 
