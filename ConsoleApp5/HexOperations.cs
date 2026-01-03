@@ -39,7 +39,6 @@ namespace ConsoleApp1
         }
         public static void HexBackward()
         {
-            Console.Write("Enter hexadecimal number: ");
             string hexInput = InputHelper.ReadString("Enter hexadecimal number: ").ToUpper();
             int decimalValue = 0;
             Console.WriteLine($"Steps to convert {hexInput} to decimal:");
@@ -55,6 +54,27 @@ namespace ConsoleApp1
 
             Console.WriteLine($"Decimal: {decimalValue}");
             ViewsResult.WaitUntilKeypress();
+        }
+        public static int HexBackwardMath(string hexInput)
+        {
+            
+            
+            int decimalValue = 0;
+            Console.WriteLine($"Steps to convert {hexInput} to decimal:");
+
+            for (int i = 0; i < hexInput.Length; i++)
+            {
+                char c = hexInput[hexInput.Length - 1 - i];
+                int digit = char.IsDigit(c) ? c - '0' : c - 'A' + 10;
+                int power = (int)Math.Pow(16, i);
+                Console.WriteLine($"{digit} × 16^{i} = {digit * power}");
+                decimalValue += digit * power;
+
+            }
+
+            Console.WriteLine($"Decimal: {decimalValue}");
+            return decimalValue;
+            
         }
     }
 }

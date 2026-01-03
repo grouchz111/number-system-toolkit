@@ -43,5 +43,25 @@ namespace ConsoleApp1
 
             ViewsResult.WaitUntilKeypress();
         }
+        public static int ConvertBinaryBackwardMath(string binary)
+        {
+            
+            int decimalValue = 0;
+
+            Console.WriteLine($"Steps to convert {binary} to decimal:");
+
+            for (int i = 0; i < binary.Length; i++)
+            {
+                int bit = binary[binary.Length - 1 - i] - '0';
+                int power = (int)Math.Pow(2, i);
+                Console.WriteLine($"{bit} × 2^{i} = {bit * power}");
+                decimalValue += bit * power;
+            }
+
+            Console.WriteLine("Decimal: " + decimalValue);
+            return decimalValue;
+
+            
+        }
     }
 }

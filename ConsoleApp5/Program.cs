@@ -135,8 +135,8 @@ namespace ConsoleApp1
                         FactorialOperations.FactorialBinForward();
                         break;
 
-                        case 18: 
-                        AritmethicAcrossSystemsOperations.AASOForward();  
+                        case 18:
+                        ArithmethicOperations.ArithmethicForward();
                         break;
 
                         case 19: 

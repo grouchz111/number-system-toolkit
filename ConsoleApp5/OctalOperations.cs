@@ -28,9 +28,28 @@ namespace ConsoleApp1
                 ViewsResult.WaitUntilKeypress();
             }
         }
+        public static int OctalBackwardMath(string octalInput)
+        {
+            int decimalValue = 0;
+            Console.WriteLine($"Steps to convert {octalInput} to decimal:");
+
+            for (int i = 0; i < octalInput.Length; i++)
+            {
+                int digit = octalInput[octalInput.Length - 1 - i] - '0';
+                int power = (int)Math.Pow(8, i);
+                Console.WriteLine($"{digit} × 8^{i} = {digit * power}");
+
+                decimalValue += digit * power;
+            }
+
+            Console.WriteLine($"Decimal: {decimalValue}");
+            return decimalValue;
+        }
+
         public static void OctalBackward()
         {
-            string octalInput = InputHelper.ReadString("Enter an octal number to convert to decimal: ");
+            string octalInput;
+            octalInput = InputHelper.ReadString("Enter an octal number to convert to decimal: ");
             int decimalValue = 0;
             Console.WriteLine($"Steps to convert {octalInput} to decimal:");
 

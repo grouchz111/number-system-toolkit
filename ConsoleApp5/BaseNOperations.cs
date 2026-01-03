@@ -58,5 +58,31 @@ namespace ConsoleApp1
             Console.WriteLine($"Decimal: {result}");
             ViewsResult.WaitUntilKeypress();
         }
+        
+        
+        public static int NBackwardMath(string inputNum)
+        {
+            Console.Write("Enter a number in base-N: ");
+            
+            Console.Write("Enter the base (2–36): ");
+            int baseN = InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {baseN}");
+
+            const string digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            int result = 0;
+            Console.WriteLine($"Steps to convert {inputNum} from base-{baseN} to decimal:");
+            for (int i = 0; i < inputNum.Length; i++)
+            {
+                char c = inputNum[inputNum.Length - 1 - i];
+                int digit = digits.IndexOf(c);
+                int power = (int)Math.Pow(baseN, i);
+                Console.WriteLine($"{digit} × {baseN}^{i} = {digit * power}");
+                result += digit * power;
+            }
+
+            Console.WriteLine($"Decimal: {result}");
+            return result;
+            
+        }
     }
 }

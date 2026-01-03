@@ -6,32 +6,25 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    class AritmethicOperations
+    class ArithmethicOperations
     {
-        public static void AritmethicForward()
+        public static void ArithmethicForward()
         {
             {
-                Console.Write("Choose number system (binary(1), decimal(2), hex(3), octal(4), roman(5), base-N(6), unary(7), duodecimal(8), vigesimal(9), balanced ternary(10), bijective base-26(11), negabinary(12), factorial(13)): ");
+                string system = InputHelper.ReadString("Enter system: Choose number system (binary(1), decimal(2), hex(3), octal(4), roman(5), base-N(6), unary(7), duodecimal(8), vigesimal(9), balanced ternary(10), bijective base-26(11), negabinary(12), factorial(13)): ").ToLower();
 
-                string system = Console.ReadLine().ToLower();
+                string num1 = InputHelper.ReadString("Type the first number: ").ToLower();
 
-                Console.Write("Enter first number: ");
-                string num1 = Console.ReadLine();
+                string num2 = InputHelper.ReadString("Type the second number: ").ToLower();
 
-                Console.Write("Enter second number: ");
-                string num2 = Console.ReadLine();
-
-                Console.Write("Choose operation (+, -, *, /): ");
-                string op = Console.ReadLine();
+                string op = InputHelper.ReadString("Select Function: (+, -, *, /) ").ToLower();
 
                 int a = 0, b = 0;
 
                 if (system == "1")
                 {
-                    a = Convert.ToInt32(num1, 2);
-                    b = Convert.ToInt32(num2, 2);
-                    Console.WriteLine($"Converted {num1} to {a} and {num2} to {b} (decimal)");
-                    ViewsResult.WaitUntilKeypress();
+                    string binary = InputHelper.ReadString("Enter a binary number to convert to decimal: ");
+                    BinaryOperations.ConvertBinaryBackwardMath(binary);
                 }
                 else if (system == "2")
                 {
@@ -42,52 +35,24 @@ namespace ConsoleApp1
                 }
                 else if (system == "3")
                 {
-                    a = Convert.ToInt32(num1, 16);
-                    b = Convert.ToInt32(num2, 16);
-                    Console.WriteLine($"Converted {num1} to {a} and {num2} to {b} (decimal)");
-                    ViewsResult.WaitUntilKeypress();
+                    string hexInput = InputHelper.ReadString("Enter hexadecimal number: ").ToUpper();
+                    HexOperations.HexBackwardMath(hexInput);
                 }
                 else if (system == "4")
                 {
-                    a = Convert.ToInt32(num1, 8);
-                    b = Convert.ToInt32(num2, 8);
-                    Console.WriteLine($"Converted {num1} to {a} and {num2} to {b} (decimal)");
-                    ViewsResult.WaitUntilKeypress();
+                    string octalInput = InputHelper.ReadString("Enter an octal number to convert to decimal: ");
+                    OctalOperations.OctalBackwardMath(octalInput);
                 }
 
                 else if (system == "5") // Roman numerals
                 {
-                    // parse Roman -> decimal using same step-by-step approach as your Roman handler
-                    int ParseRoman(string s)
-                    {
-                        s = s.ToUpper();
-                        var map = new System.Collections.Generic.Dictionary<char, int> {
-                {'I',1},{'V',5},{'X',10},{'L',50},{'C',100},{'D',500},{'M',1000}
-            };
-                        int total = 0;
-                        for (int i = 0; i < s.Length; i++)
-                        {
-                            int value = map.ContainsKey(s[i]) ? map[s[i]] : 0;
-                            if (i + 1 < s.Length && map.ContainsKey(s[i + 1]) && map[s[i + 1]] > value)
-                                total -= value;
-                            else
-                                total += value;
-                        }
-                        return total;
-                        ViewsResult.WaitUntilKeypress();
-                    }
-
-                    a = ParseRoman(num1);
-                    b = ParseRoman(num2);
-                    Console.WriteLine($"Converted {num1} to {a} and {num2} to {b} (decimal)");
+                    string roman = InputHelper.ReadString("Enter a Roman numeral to convert to decimal: ").ToUpper();
+                    RomanOperations.RomanBackwardMath(roman);
                 }
                 else if (system == "6") // Base-N (2–36)
                 {
-                    Console.Write("Enter the base (2–36): ");
-                    int baseN = int.Parse(Console.ReadLine());
-                    a = Convert.ToInt32(num1.ToUpper(), baseN);
-                    b = Convert.ToInt32(num2.ToUpper(), baseN);
-                    Console.WriteLine($"Converted {num1} (base-{baseN}) to {a} and {num2} (base-{baseN}) to {b} (decimal)");
+                    string inputNum = Console.ReadLine().ToUpper();
+                    BaseNOperations.NBackwardMath(inputNum);    
                 }
                 else if (system == "7") // Unary (tally)
                 {
