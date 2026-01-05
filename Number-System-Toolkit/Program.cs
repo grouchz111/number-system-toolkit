@@ -46,108 +46,94 @@ namespace ConsoleApp1
                 Console.WriteLine(menu.ToString());
 
                 // selector
-                string input = Console.ReadLine();
-
-                if (input is null)
-                {
-                    continue;
-                }
-
-                if (input.Equals("exit", StringComparison.OrdinalIgnoreCase))
-                {
-                    MenuClause.Exit(input);
-                }
-
-                if (!int.TryParse(input, out int choice))
-                {
-                    Console.WriteLine("Invalid input. Please enter a number or 'exit'.");
-                    continue;
-                }
+                string input;
+                input = InputHelper.ReadString("");
+                string choice = input;
 
                 // Selection blocks - unified PascalCase class names
                 switch (choice)
                 {
-                        case 1:
+                    case "1":
                         BinaryOperations.ConvertToBinaryForward();
                         break;
 
-                        case 2:
+                    case "2":
                         BinaryOperations.ConvertBinaryBackward();
                         break;
-                        
-                        case 3:
+
+                    case "3":
                         HexOperations.HexForward();
                         break;
 
-                        case 4:
-                        HexOperations.HexBackward();    
+                    case "4":
+                        HexOperations.HexBackward();
                         break;
 
-                        case 5:
+                    case "5":
                         OctalOperations.OctalForward();
                         break;
 
-                        case 6:
+                    case "6":
                         OctalOperations.OctalBackward();
                         break;
 
-                        case 7:
+                    case "7":
                         RomanOperations.RomanForward();
                         break;
 
-                        case 8 :
+                    case "8":
                         RomanOperations.RomanBackward();
                         break;
 
-                        case 9:
+                    case "9":
                         BaseNOperations.NForward();
                         break;
 
-                        case 10:
+                    case "10":
                         BaseNOperations.NBackward();
                         break;
 
-                        case 11:
+                    case "11":
                         UnaryOperations.UnaryForward();
                         break;
 
-                        case 12:
+                    case "12":
                         DuodecimalOperations.DuodecimalForward();
                         break;
 
-                        case 13:
+                    case "13":
                         VigesimalOperations.VigesimalForward();
                         break;
 
-                        case 14:
+                    case "14":
                         BalancedTernaryOperations.BalancedTernaryForward();
                         break;
 
-                        case 15:
+                    case "15":
                         BijectiveOperations.BijectiveForward();
                         break;
 
-                        case 16:
+                    case "16":
                         NBinaryOperations.Forward();
                         break;
 
-                        case 17: 
+                    case "17":
                         FactorialOperations.FactorialBinForward();
                         break;
 
-                        case 18:
+                    case "18":
                         ArithmethicOperations.ArithmethicForward();
                         break;
 
-                        case 19: 
+                    case "19":
                         DecimalDoublesToBinaryOperations.DDTBOForward();
                         break;
 
-                        case 20: 
+                    case "20":
                         IntShiftOperations.IntShiftMenu();
                         break;
 
-                        case 21:
+                    case "21":
                         MedianOperations.MedianForward();
                         break;
                 }
