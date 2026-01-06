@@ -34,5 +34,82 @@ namespace ConsoleApp1
                 ViewsResult.WaitUntilKeypress();
             }
         }
+        public static void BalancedTernaryBackward()
+        {
+            Console.Write("Enter balanced ternary number (digits: 1, 0, T): ");
+            string s = InputHelper.ReadString("Enter balanced ternary number: ").Trim().ToUpper();
+
+            Console.WriteLine($"You entered: {s}");
+
+            // Validate characters
+            if (!s.All(c => c == '1' || c == '0' || c == 'T'))
+            {
+                Console.WriteLine("Invalid input. Balanced ternary digits must be 1, 0, or T (for -1).");
+                ViewsResult.WaitUntilKeypress();
+                return;
+            }
+
+            Console.WriteLine($"Steps to convert {s} to decimal:");
+
+            long result = 0;
+
+            foreach (char c in s)
+            {
+                int value = c switch
+                {
+                    '1' => 1,
+                    '0' => 0,
+                    'T' => -1,
+                    _ => 0
+                };
+
+                long before = result;
+                result = result * 3 + value;
+
+                Console.WriteLine($"{before} * 3 + {value} = {result}");
+            }
+
+            Console.WriteLine($"Decimal value: {result}");
+            ViewsResult.WaitUntilKeypress();
+        }
+
+        public static int BalancedTernaryBackwardMath(string num2)
+        {
+            Console.Write("Enter balanced ternary number (digits: 1, 0, T): ");
+            string s = InputHelper.ReadString("Enter balanced ternary number: ").Trim().ToUpper();
+
+            Console.WriteLine($"You entered: {s}");
+
+            // Validate characters
+            if (!s.All(c => c == '1' || c == '0' || c == 'T'))
+            {
+                Console.WriteLine("Invalid input. Balanced ternary digits must be 1, 0, or T (for -1).");
+                ViewsResult.WaitUntilKeypress();
+            }
+
+            Console.WriteLine($"Steps to convert {s} to decimal:");
+
+            long result = 0;
+
+            foreach (char c in s)
+            {
+                int value = c switch
+                {
+                    '1' => 1,
+                    '0' => 0,
+                    'T' => -1,
+                    _ => 0
+                };
+
+                long before = result;
+                result = result * 3 + value;
+
+                Console.WriteLine($"{before} * 3 + {value} = {result}");
+            }
+
+            Console.WriteLine($"Decimal value: {result}");
+            ViewsResult.WaitUntilKeypress();
+            return (int)result;
+        }
     }
 }

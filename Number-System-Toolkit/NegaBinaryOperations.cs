@@ -35,5 +35,60 @@ namespace ConsoleApp1
                 ViewsResult.WaitUntilKeypress();
             }
         }
+        public static void Backward()
+        {
+            Console.Write("Enter negabinary number (base -2) to convert to decimal: ");
+            string s = Console.ReadLine().Trim();
+
+            if (string.IsNullOrEmpty(s) || !s.All(c => c == '0' || c == '1'))
+            {
+                Console.WriteLine("Invalid input. Negabinary digits must be 0 or 1.");
+                return;
+            }
+
+            Console.WriteLine($"You entered: {s}");
+            Console.WriteLine($"Steps to convert {s} to decimal:");
+
+            long result = 0;
+
+            foreach (char c in s)
+            {
+                int digit = c - '0';
+                long before = result;
+                result = result * -2 + digit;
+                Console.WriteLine($"{before} * -2 + {digit} = {result}");
+            }
+
+            Console.WriteLine($"Decimal value: {result}");
+            ViewsResult.WaitUntilKeypress();
+        }
+        public static int BackwardMath(string s)
+        {
+            Console.Write("Enter negabinary number (base -2) to convert to decimal: ");
+
+
+            if (string.IsNullOrEmpty(s) || !s.All(c => c == '0' || c == '1'))
+            {
+                Console.WriteLine("Invalid input. Negabinary digits must be 0 or 1.");
+            }
+
+            Console.WriteLine($"You entered: {s}");
+            Console.WriteLine($"Steps to convert {s} to decimal:");
+
+            long result = 0;
+
+            foreach (char c in s)
+            {
+                int digit = c - '0';
+                long before = result;
+                result = result * -2 + digit;
+                Console.WriteLine($"{before} * -2 + {digit} = {result}");
+            }
+
+            Console.WriteLine($"Decimal value: {result}");
+            ViewsResult.WaitUntilKeypress();
+            return (int)result;
+        }
+
     }
 }

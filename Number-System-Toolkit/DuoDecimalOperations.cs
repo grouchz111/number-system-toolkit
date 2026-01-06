@@ -30,5 +30,81 @@ namespace ConsoleApp1
                 ViewsResult.WaitUntilKeypress();
             }
         }
+        public static void DuodecimalBackward()
+        {
+            Console.Write("Enter duodecimal (base 12) number: ");
+            string s = InputHelper.ReadString("Enter duodecimal number: ").Trim().ToUpper();
+
+            Console.WriteLine($"You entered: {s}");
+
+            // Validate characters
+            if (!s.All(c => char.IsDigit(c) || (c >= 'A' && c <= 'B')))
+            {
+                Console.WriteLine("Invalid input. Base-12 digits must be 0-9 or A-B.");
+                ViewsResult.WaitUntilKeypress();
+                return;
+            }
+
+            Console.WriteLine($"Steps to convert {s} to decimal:");
+
+            long result = 0;
+
+            foreach (char c in s)
+            {
+                int value;
+
+                if (char.IsDigit(c))
+                    value = c - '0';
+                else
+                    value = 10 + (c - 'A'); // A=10, B=11
+
+                long before = result;
+                result = result * 12 + value;
+
+                Console.WriteLine($"{before} * 12 + {value} = {result}");
+            }
+
+            Console.WriteLine($"Decimal value: {result}");
+            ViewsResult.WaitUntilKeypress();
+        }
+        public static int DuodecimalBackwardMath(string s)
+        {
+            Console.Write("Enter duodecimal (base 12) number: ");
+            s = InputHelper.ReadString("Enter duodecimal number: ").Trim().ToUpper();
+
+            Console.WriteLine($"You entered: {s}");
+
+            // Validate characters
+            if (!s.All(c => char.IsDigit(c) || (c >= 'A' && c <= 'B')))
+            {
+                Console.WriteLine("Invalid input. Base-12 digits must be 0-9 or A-B.");
+                ViewsResult.WaitUntilKeypress();
+                
+            }
+
+            Console.WriteLine($"Steps to convert {s} to decimal:");
+
+            long result = 0;
+
+            foreach (char c in s)
+            {
+                int value;
+
+                if (char.IsDigit(c))
+                    value = c - '0';
+                else
+                    value = 10 + (c - 'A'); // A=10, B=11
+
+                long before = result;
+                result = result * 12 + value;
+
+                Console.WriteLine($"{before} * 12 + {value} = {result}");
+            }
+
+            Console.WriteLine($"Decimal value: {result}");
+            ViewsResult.WaitUntilKeypress();
+            return (int)result;
+        }
+
     }
 }

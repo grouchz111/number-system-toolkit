@@ -28,5 +28,86 @@ namespace ConsoleApp1
                         Console.WriteLine("Vigesimal: " + res);
                     }
         }
+        public static int VigesimalBackward()
+        {
+            Console.Write("Enter vigesimal (base 20) number: ");
+            string s = InputHelper.ReadString("Enter vigesimal number: ").Trim().ToUpper();
+
+            Console.WriteLine($"You entered: {s}");
+
+            // Validate characters: 0–9 and A–J only
+            if (!s.All(c =>
+                char.IsDigit(c) ||
+                (c >= 'A' && c <= 'J')))
+            {
+                Console.WriteLine("Invalid input. Base-20 digits must be 0-9 or A-J.");
+                ViewsResult.WaitUntilKeypress();
+            }
+
+            Console.WriteLine($"Steps to convert {s} to decimal:");
+
+            long result = 0;
+
+            foreach (char c in s)
+            {
+                int value;
+
+                if (char.IsDigit(c))
+                    value = c - '0';
+                else
+                    value = 10 + (c - 'A'); // A=10, B=11, ..., J=19
+
+                long before = result;
+                result = result * 20 + value;
+
+                Console.WriteLine($"{before} * 20 + {value} = {result}");
+            }
+
+            Console.WriteLine($"Decimal value: {result}");
+            return (int)result;
+            ViewsResult.WaitUntilKeypress();
+        }
+
+        public static int VigesimalBackwardMath(string s)
+        {
+            Console.Write("Enter vigesimal (base 20) number: ");
+            s = InputHelper.ReadString("Enter vigesimal number: ").Trim().ToUpper();
+
+            Console.WriteLine($"You entered: {s}");
+
+            // Validate characters: 0–9 and A–J only
+            if (!s.All(c =>
+                char.IsDigit(c) ||
+                (c >= 'A' && c <= 'J')))
+            {
+                Console.WriteLine("Invalid input. Base-20 digits must be 0-9 or A-J.");
+                ViewsResult.WaitUntilKeypress();  
+            }
+
+
+            Console.WriteLine($"Steps to convert {s} to decimal:");
+
+            long result = 0;
+
+            foreach (char c in s)
+            {
+                int value;
+
+                if (char.IsDigit(c))
+                    value = c - '0';
+                else
+                    value = 10 + (c - 'A'); // A=10, B=11, ..., J=19
+
+                long before = result;
+                result = result * 20 + value;
+
+                Console.WriteLine($"{before} * 20 + {value} = {result}");
+            }
+
+            Console.WriteLine($"Decimal value: {result}");
+            ViewsResult.WaitUntilKeypress();
+            return (int)result;
+        }
+
     }
 }
