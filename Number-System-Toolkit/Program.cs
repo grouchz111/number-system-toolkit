@@ -42,6 +42,7 @@ namespace ConsoleApp1
                 menu.AppendLine("19: Convert decimal doubles to binary");
                 menu.AppendLine("20: Shift integer");
                 menu.AppendLine("21: Median Operations");
+                menu.AppendLine("22: Combinatoric Operations");
                 menu.AppendLine("'exit' to quit:");
                 Console.WriteLine(menu.ToString());
 
@@ -135,6 +136,10 @@ namespace ConsoleApp1
 
                     case "21":
                         MedianOperations.MedianForward();
+                        break;
+
+                    case "22":
+                        CombinatoricsOperations.CombinatoricsForward();
                         break;
                 }
             }
