@@ -1,13 +1,33 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ConsoleApp1
 {
     class ArithmethicOperations
     {
+
+        public enum NumberSystem
+        {
+            Binary = 1,
+            Decimal = 2,
+            Hex = 3,
+            Octal = 4,
+            Roman = 5,
+            BaseN = 6,
+            Unary = 7,
+            Duodecimal = 8,
+            Vigesimal = 9,
+            BalancedTernary = 10,
+            Bijective = 11,
+            Negabinary = 12,
+            Factorial = 13
+        }
+
+
         public static void ArithmethicForward()
         {
             string system = InputHelper.ReadString(
-                "Choose system: binary(1), decimal(2), hex(3), octal(4), roman(5), base-N(6), unary(7), duodecimal(8), vigesimal(9), balanced ternary(10), bijective(11), negabinary(12), factorial(13): ");
+                "Choose system: binary(1), \ndecimal(2), \nhex(3), \noctal(4), \nroman(5), \nbase-N(6), \nunary(7), \nduodecimal(8), \nvigesimal(9), \nbalanced ternary(10), \nbijective(11), \nnegabinary(12), \nfactorial(13): ");
 
             string num1 = InputHelper.ReadString("First number: ");
             string num2 = InputHelper.ReadString("Second number: ");
@@ -15,7 +35,7 @@ namespace ConsoleApp1
 
             int a = 0;
             int b = 0;
-
+            
             switch (system)
             {
                 case "1": // Binary

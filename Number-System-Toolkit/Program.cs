@@ -1,5 +1,6 @@
 ﻿using name;
 using System;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -18,40 +19,57 @@ namespace ConsoleApp1
         {
             while (true)
             {
+
                 // Entry text
-                StringBuilder menu = new StringBuilder();
-                menu.AppendLine("\n Enter your choice:");
-                menu.AppendLine("1: Decimal to Binary");
-                menu.AppendLine("2: Binary to Decimal");
-                menu.AppendLine("3: Decimal to Hex");
-                menu.AppendLine("4: Hex to Decimal");
-                menu.AppendLine("5: Decimal to Octal");
-                menu.AppendLine("6: Octal to Decimal");
-                menu.AppendLine("7: Decimal to Roman");
-                menu.AppendLine("8: Roman to Decimal");
-                menu.AppendLine("9: Decimal to Base-N (2–36)");
-                menu.AppendLine("10: Base-N to Decimal (2–36)");
-                menu.AppendLine("11: Decimal to Unary (tally)");
-                menu.AppendLine("12: Decimal to Duodecimal (base 12)");
-                menu.AppendLine("13: Decimal to Vigesimal (base 20)");
-                menu.AppendLine("14: Decimal to Balanced Ternary");
-                menu.AppendLine("15: Decimal to Bijective Base-26 (A–Z)");
-                menu.AppendLine("16: Decimal to Negabinary (base -2)");
-                menu.AppendLine("17: Decimal to Factorial Number System");
-                menu.AppendLine("18: Arithmetic across systems");
-                menu.AppendLine("19: Convert decimal doubles to binary");
-                menu.AppendLine("20: Shift integer");
-                menu.AppendLine("21: Median Operations");
-                menu.AppendLine("22: Combinatoric Operations");
-                menu.AppendLine("'exit' to quit:");
-                Console.WriteLine(menu.ToString());
+                //StringBuilder menu = new StringBuilder();
+                List<string> subjects = new List<string>() {
+                                                                                         "1: Decimal to Binary",
+                                                                                         "2: Binary to Decimal",
+                                                                                         "3: Decimal to Hex",
+                                                                                         "4: Hex to Decimal",
+                                                                                         "5: Decimal to Octal",
+                                                                                         "6: Octal to Decimal",
+                                                                                         "7: Decimal to Roman",
+                                                                                         "8: Roman to Decimal",
+                                                                                         "9: Decimal to Base-N 2–36",
+                                                                                         "10: Base-N to Decimal 2–36",
+                                                                                         "11: Decimal to Unary tally",
+                                                                                         "12: Decimal to Duodecimal base 12",
+                                                                                         "13: Decimal to Vigesimal base 20",
+                                                                                         "14: Decimal to Balanced Ternary",
+                                                                                         "15: Decimal to Bijective Base-26 A–Z",
+                                                                                         "16: Decimal to Negabinary base -2",
+                                                                                         "17: Decimal to Factorial Number System",
+                                                                                         "18: Arithmetic across systems",
+                                                                                         "19: Convert decimal doubles to binary",
+                                                                                         "20: Shift integer",
+                                                                                         "21: Median Operations",
+                                                                                         "22: Combinatoric Operations",
+                                                                                         "'exit' to quit:", };
+                Console.WriteLine(string.Join(Environment.NewLine, subjects));
+                //// foreach (string subject in subjects)
+                //{
+                //    //menu.AppendLine(subject);
+
+                //}
+
+                //Console.WriteLine(menu.ToString());
 
                 // selector
                 string input;
                 input = InputHelper.ReadString("");
                 string choice = input;
 
-                // Selection blocks - unified PascalCase class names
+
+                if (!int.TryParse(choice, out var num) || num is < 1 or > 22)
+                {
+                    Console.WriteLine("Invalid choice (1–22 only).");
+                    ViewsResult.WaitUntilKeypress();
+                    continue;
+                }
+
+
+                
                 switch (choice)
                 {
                     case "1":
@@ -143,7 +161,6 @@ namespace ConsoleApp1
                         break;
                 }
             }
-
         }
     }
 }
