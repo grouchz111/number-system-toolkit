@@ -43,7 +43,7 @@ namespace ConsoleApp1
             Console.WriteLine($"C(n, k) = {comb}");
             Console.WriteLine($"C(n+k -1,k) = {combRep}");
 
-            ViewsResult.WaitUntilKeypress();
+            
         }
 
     }

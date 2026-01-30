@@ -1,4 +1,4 @@
-﻿using name;
+﻿
 using System;
 
 namespace ConsoleApp1
@@ -12,8 +12,7 @@ namespace ConsoleApp1
                 Console.Write(prompt);
                 string input = Console.ReadLine();
 
-                MenuClause.Exit(input);
-                MenuClause.Menu(input);
+
 
                 if (int.TryParse(input, out int result))
                 {
@@ -31,8 +30,6 @@ namespace ConsoleApp1
                 Console.Write(prompt);
                 string input = Console.ReadLine();
 
-                MenuClause.Exit(input);
-                MenuClause.Menu(input);
 
                 if (double.TryParse(input, out double result))
                 {
@@ -50,8 +47,7 @@ namespace ConsoleApp1
                 Console.Write(prompt);
                 string input = Console.ReadLine();
 
-                MenuClause.Exit(input);
-                MenuClause.Menu(input);
+
 
                 return input;
             }   

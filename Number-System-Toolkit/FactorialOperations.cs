@@ -31,7 +31,7 @@ namespace ConsoleApp1
                     }
                     digitsFact.Reverse();
                     Console.WriteLine("Factorial representation (digits for 1!,2!,3!,...): " + string.Join("", digitsFact));
-                    ViewsResult.WaitUntilKeypress();
+                    
                 }
             }
             }
@@ -46,7 +46,7 @@ namespace ConsoleApp1
             if (!s.All(char.IsDigit))
             {
                 Console.WriteLine("Invalid input. Only digits 0–9 are allowed.");
-                ViewsResult.WaitUntilKeypress();
+                
                 return;
             }
 
@@ -54,7 +54,7 @@ namespace ConsoleApp1
             if (s == "0")
             {
                 Console.WriteLine("Decimal value: 0");
-                ViewsResult.WaitUntilKeypress();
+                
                 return;
             }
 
@@ -84,7 +84,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
         }
 
         public static int FactorialBinBackwardMath(string s)
@@ -98,7 +98,7 @@ namespace ConsoleApp1
             if (!s.All(char.IsDigit))
             {
                 Console.WriteLine("Invalid input. Only digits 0–9 are allowed.");
-                ViewsResult.WaitUntilKeypress();
+                
                 
             }
 
@@ -106,7 +106,7 @@ namespace ConsoleApp1
             if (s == "0")
             {
                 Console.WriteLine("Decimal value: 0");
-                ViewsResult.WaitUntilKeypress();
+                
                 
             }
 
@@ -136,7 +136,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
             return (int)result;
         }
 

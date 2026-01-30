@@ -27,7 +27,7 @@ namespace ConsoleApp1
                     temp /= 12;
                 }
                 Console.WriteLine("Duodecimal: " + res);
-                ViewsResult.WaitUntilKeypress();
+                
             }
         }
         public static void DuodecimalBackward()
@@ -41,7 +41,7 @@ namespace ConsoleApp1
             if (!s.All(c => char.IsDigit(c) || (c >= 'A' && c <= 'B')))
             {
                 Console.WriteLine("Invalid input. Base-12 digits must be 0-9 or A-B.");
-                ViewsResult.WaitUntilKeypress();
+                
                 return;
             }
 
@@ -65,7 +65,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
         }
         public static int DuodecimalBackwardMath(string s)
         {
@@ -78,7 +78,7 @@ namespace ConsoleApp1
             if (!s.All(c => char.IsDigit(c) || (c >= 'A' && c <= 'B')))
             {
                 Console.WriteLine("Invalid input. Base-12 digits must be 0-9 or A-B.");
-                ViewsResult.WaitUntilKeypress();
+                
                 
             }
 
@@ -102,7 +102,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
             return (int)result;
         }
 

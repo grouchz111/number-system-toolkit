@@ -30,7 +30,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine("Roman numeral: " + roman);
-            ViewsResult.WaitUntilKeypress();
+            
         }
         public static void RomanBackward()
         {
@@ -51,7 +51,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine("Decimal: " + total);
-            ViewsResult.WaitUntilKeypress();
+            
         }
         public static int RomanBackwardMath(string roman)
         {
@@ -74,7 +74,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("Decimal: " + total);
 
-            ViewsResult.WaitUntilKeypress();
+            
             return total;
         }
     }

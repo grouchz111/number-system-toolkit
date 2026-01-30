@@ -32,7 +32,7 @@ namespace ConsoleApp1
                     temp = quotient;
                 }
                 Console.WriteLine("Negabinary: " + sb.ToString());
-                ViewsResult.WaitUntilKeypress();
+                
             }
         }
         public static void Backward()
@@ -60,7 +60,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
         }
         public static int BackwardMath(string s)
         {
@@ -86,7 +86,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
             return (int)result;
         }
 

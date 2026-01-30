@@ -139,7 +139,7 @@ namespace ConsoleApp1
             Console.WriteLine($"Octal: {Convert.ToString(result, 8)}");
             Console.WriteLine($"Hex: {Convert.ToString(result, 16).ToUpper()}");
 
-            ViewsResult.WaitUntilKeypress();
+            
         }
     }
 }

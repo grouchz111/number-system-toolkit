@@ -39,7 +39,7 @@ namespace ConsoleApp1
             int shifted = a << shift;
             Console.WriteLine($"{a} << {shift} = {shifted}");
             Console.WriteLine("Binary: " + Convert.ToString(shifted, 2));
-            ViewsResult.WaitUntilKeypress();
+            
         }
 
         public static void IntShiftRight(int a, int shift)
@@ -47,7 +47,7 @@ namespace ConsoleApp1
             int shifted = a >> shift;
             Console.WriteLine($"{a} >> {shift} = {shifted}");
             Console.WriteLine("Binary: " + Convert.ToString(shifted, 2));
-            ViewsResult.WaitUntilKeypress();
+            
         }
     }
 }
