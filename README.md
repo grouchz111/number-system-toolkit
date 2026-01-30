@@ -80,3 +80,26 @@ Each numeral system or feature is implemented in its own class:
 ``Unary Operations.cs``
 
 ``Vigesimal Operations.cs``
+
+
+## How to use:
+1. Open the app.<img width="1505" height="813" alt="image" src="https://github.com/user-attachments/assets/d7b484d6-4c87-4192-baf1-2418a51c055e" />
+2. Choose which function you want to use: The app has 22 different options, type the number corresponding with your desired choice.<img width="635" height="678" alt="image" src="https://github.com/user-attachments/assets/a0ad6bbf-10ca-4e93-9e56-da281bf4fbfd" /> (As an example, 2 will lead us to the second choice, ``Binary to Decimal``
+3. Press enter once you've selected a function and typed its' corresponding number
+4. You will now receive instructions what to type, example (continuing from the previously selected choice 2:) <img width="1104" height="703" alt="image" src="https://github.com/user-attachments/assets/02fd825a-669b-40f5-af4f-66b28fd76ad5" />, let's type 1100 as an example
+5. Once typed, press "Enter"
+6. You will now see the steps which the program took to get to the answer, and the answer itself
+
+<img width="660" height="241" alt="image" src="https://github.com/user-attachments/assets/78981757-f02a-42e2-94d5-a2540bd42121" />
+
+7. Press any key to enter the Main Menu
+
+
+### Bonus menu commands:
+1. "Menu" or "M": Typing those commands in certain input lines will allow you to go back to the Main Menu, and start the selection process again
+2.  "Exit" or "Q" or "X": Typing those commands in certain input lines will allow you to exit the program
+3.  Control+C, acts the same way as Command 2, but more reliably as it works on all input lines.
+
+
+
+
