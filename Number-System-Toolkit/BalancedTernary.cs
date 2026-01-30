@@ -31,7 +31,7 @@ namespace ConsoleApp1
                     sb.Insert(0, digit);
                 }
                 Console.WriteLine("Balanced ternary (T = -1): " + sb.ToString());
-                ViewsResult.WaitUntilKeypress();
+                
             }
         }
         public static void BalancedTernaryBackward()
@@ -45,7 +45,7 @@ namespace ConsoleApp1
             if (!s.All(c => c == '1' || c == '0' || c == 'T'))
             {
                 Console.WriteLine("Invalid input. Balanced ternary digits must be 1, 0, or T (for -1).");
-                ViewsResult.WaitUntilKeypress();
+                
                 return;
             }
 
@@ -70,7 +70,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
         }
 
         public static int BalancedTernaryBackwardMath(string num2)
@@ -84,7 +84,7 @@ namespace ConsoleApp1
             if (!s.All(c => c == '1' || c == '0' || c == 'T'))
             {
                 Console.WriteLine("Invalid input. Balanced ternary digits must be 1, 0, or T (for -1).");
-                ViewsResult.WaitUntilKeypress();
+                
             }
 
             Console.WriteLine($"Steps to convert {s} to decimal:");
@@ -108,7 +108,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
             return (int)result;
         }
     }

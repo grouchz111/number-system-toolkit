@@ -27,7 +27,7 @@ namespace ConsoleApp1
                     temp /= 26;
                 }
                 Console.WriteLine("Bijective base-26: " + sb.ToString());
-                ViewsResult.WaitUntilKeypress();
+                
             }
         }
         public static void BijectiveBackward()
@@ -54,7 +54,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
         }
         public static int BijectiveBackwardMath(string s)
         {
@@ -79,7 +79,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
             return (int)result;
         }
 

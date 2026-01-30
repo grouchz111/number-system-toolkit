@@ -21,7 +21,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("Binary: " + binary);
 
-            ViewsResult.WaitUntilKeypress();
+            
         }
 
         public static void ConvertBinaryBackward()
@@ -41,7 +41,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("Decimal: " + decimalValue);
 
-            ViewsResult.WaitUntilKeypress();
+            
         }
         public static int ConvertBinaryBackwardMath(string binary)
         {

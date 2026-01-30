@@ -41,7 +41,7 @@ namespace ConsoleApp1
                 (c >= 'A' && c <= 'J')))
             {
                 Console.WriteLine("Invalid input. Base-20 digits must be 0-9 or A-J.");
-                ViewsResult.WaitUntilKeypress();
+                
             }
 
             Console.WriteLine($"Steps to convert {s} to decimal:");
@@ -65,7 +65,7 @@ namespace ConsoleApp1
 
             Console.WriteLine($"Decimal value: {result}");
             return (int)result;
-            ViewsResult.WaitUntilKeypress();
+            
         }
 
         public static int VigesimalBackwardMath(string s)
@@ -81,7 +81,7 @@ namespace ConsoleApp1
                 (c >= 'A' && c <= 'J')))
             {
                 Console.WriteLine("Invalid input. Base-20 digits must be 0-9 or A-J.");
-                ViewsResult.WaitUntilKeypress();  
+                  
             }
 
 
@@ -105,7 +105,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {result}");
-            ViewsResult.WaitUntilKeypress();
+            
             return (int)result;
         }
 

@@ -25,7 +25,7 @@ namespace ConsoleApp1
                 }
 
                 Console.WriteLine("Octal: " + octal);
-                ViewsResult.WaitUntilKeypress();
+                
             }
         }
         public static int OctalBackwardMath(string octalInput)
@@ -62,7 +62,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal: " + decimalValue);
-            ViewsResult.WaitUntilKeypress();
+            
         }
     }
 }

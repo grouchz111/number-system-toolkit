@@ -1,12 +1,11 @@
-﻿using name;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using Spectre.Console;
 
 namespace ConsoleApp1
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             while (true)
             {
@@ -17,52 +16,66 @@ namespace ConsoleApp1
 
         public static void Menu()
         {
-            Console.Clear();
+            Console.Clear(); Console.WriteLine(
 
-            List<string> subjects = new List<string>() {
-                "1: Decimal to Binary",
-                "2: Binary to Decimal",
-                "3: Decimal to Hex",
-                "4: Hex to Decimal",
-                "5: Decimal to Octal",
-                "6: Octal to Decimal",
-                "7: Decimal to Roman",
-                "8: Roman to Decimal",
-                "9: Decimal to Base-N 2–36",
-                "10: Base-N to Decimal 2–36",
-                "11: Decimal to Unary tally",
-                "12: Decimal to Duodecimal base 12",
-                "13: Decimal to Vigesimal base 20",
-                "14: Decimal to Balanced Ternary",
-                "15: Decimal to Bijective Base-26 A–Z",
-                "16: Decimal to Negabinary base -2",
-                "17: Decimal to Factorial Number System",
-                "18: Arithmetic across systems",
-                "19: Convert decimal doubles to binary",
-                "20: Shift integer",
-                "21: Median Operations",
-                "22: Combinatoric Operations",
-                "'exit' to quit:"
-            };
+           
+            );
 
-            foreach (var line in subjects)
-                Console.WriteLine(line);
+            AnsiConsole.WriteLine();
         }
 
-        public static void Selector()
+        static void Selector()
         {
-            string choice = InputHelper.ReadString("Enter choice: ");
+            var choice = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("Pick a function [green](use ↑↓ arrows, enter to confirm)[/]")
+                    .PageSize(12)
+                    .MoreChoicesText("[grey](scroll for more functions[/]")  
+                    .AddChoices(
+                        "1: Decimal to Binary",
+                        "2: Binary to Decimal",
+                        "3: Decimal to Hex",
+                        "4: Hex to Decimal",
+                        "5: Decimal to Octal",
+                        "6: Octal to Decimal",
+                        "7: Decimal to Roman",
+                        "8: Roman to Decimal",
+                        "9: Decimal to Base-N 2–36",
+                        "10: Base-N to Decimal 2–36",
+                        "11: Decimal to Unary tally",
+                        "12: Decimal to Duodecimal base 12",
+                        "13: Decimal to Vigesimal base 20",
+                        "14: Decimal to Balanced Ternary",
+                        "15: Decimal to Bijective Base-26 A–Z",
+                        "16: Decimal to Negabinary base -2",
+                        "17: Decimal to Factorial Number System",
+                        "18: Arithmetic across systems",
+                        "19: Convert decimal doubles to binary",
+                        "20: Shift integer",
+                        "21: Median Operations",
+                        "22: Combinatoric Operations",
+                        "[red]exit [/]"
+                    )
+            );
 
-            if (choice == "exit")
-                Environment.Exit(0);
-
-            if (!int.TryParse(choice, out var num) || num < 1 || num > 22)
+            // Exit check — case insensitive, no fancy Contains on span
+            if (choice.IndexOf("exit", StringComparison.OrdinalIgnoreCase) >= 0)
             {
-                Console.WriteLine("Invalid choice (1–22 only).");
+                AnsiConsole.MarkupLine("[bold red]Escaping this dumpster fire. Later.[/]");
+                Environment.Exit(0);
+            }
+
+            // Extract number safely (no Split on whatever-T)
+            var parts = choice.Split(new[] { ':' }, 2);  // split once
+            if (parts.Length < 1 || !int.TryParse(parts[0].Trim(), out int num) || num < 1 || num > 22)
+            {
+                AnsiConsole.MarkupLine("[yellow]Dude, that selection is cursed. Pick again.[/]");
+                AnsiConsole.Prompt(new ConfirmationPrompt("Hit enter to continue..."));
                 return;
             }
 
-            switch (choice)
+            // Your original switch logic — using the extracted number as string for consistency
+            switch (parts[0].Trim())
             {
                 case "1": BinaryOperations.ConvertToBinaryForward(); break;
                 case "2": BinaryOperations.ConvertBinaryBackward(); break;
@@ -87,6 +100,9 @@ namespace ConsoleApp1
                 case "21": MedianOperations.MedianForward(); break;
                 case "22": CombinatoricsOperations.CombinatoricsForward(); break;
             }
+
+            AnsiConsole.WriteLine();
+            AnsiConsole.Prompt(new ConfirmationPrompt("[grey]Press enter to go back...[/]"));
         }
     }
 }

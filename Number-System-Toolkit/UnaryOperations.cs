@@ -16,7 +16,7 @@ namespace ConsoleApp1
             InputHelper.ReadInt("Enter decimal number: "); Console.WriteLine($"You entered: {n1}");
             Console.WriteLine($"You entered: {n}");
             Console.WriteLine($"Unary (tally) for {n}: " + (n > 0 ? new string('|', n) : "0"));
-            ViewsResult.WaitUntilKeypress();
+            
         }
         public static void UnaryBackward()
         {
@@ -29,14 +29,14 @@ namespace ConsoleApp1
             if (s == "0")
             {
                 Console.WriteLine("Decimal value: 0");
-                ViewsResult.WaitUntilKeypress();
+                
                 return;
             }
 
             if (!s.All(c => c == '|'))
             {
                 Console.WriteLine("Invalid unary input. Only '|' or '0' are allowed.");
-                ViewsResult.WaitUntilKeypress();
+                
                 return;
             }
 
@@ -50,7 +50,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {count}");
-            ViewsResult.WaitUntilKeypress();
+            
         }
 
         public static int UnaryBackwardMath(string s)
@@ -64,14 +64,14 @@ namespace ConsoleApp1
             if (s == "0")
             {
                 Console.WriteLine("Decimal value: 0");
-                ViewsResult.WaitUntilKeypress();
+                
                 
             }
 
             if (!s.All(c => c == '|'))
             {
                 Console.WriteLine("Invalid unary input. Only '|' or '0' are allowed.");
-                ViewsResult.WaitUntilKeypress();
+                
                 
             }
 
@@ -85,7 +85,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine($"Decimal value: {count}");
-            ViewsResult.WaitUntilKeypress();
+            
             return (int)count;
         }
 
