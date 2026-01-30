@@ -54,7 +54,7 @@ namespace ConsoleApp1
                 MenuClause.Menu(input);
 
                 return input;
-            }
+            }   
         }
 
     }

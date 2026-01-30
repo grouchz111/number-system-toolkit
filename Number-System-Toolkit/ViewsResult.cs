@@ -10,8 +10,8 @@ namespace ConsoleApp1
     {
         public static void WaitUntilKeypress()
         {
-            Console.ReadKey(true);
             Console.WriteLine("Press a key to continue to the Main Menu...");
+            Console.ReadKey(true);
         }
     }
 }
