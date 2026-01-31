@@ -46,9 +46,6 @@ namespace ConsoleApp1
             {
                 Console.Write(prompt);
                 string input = Console.ReadLine();
-
-
-
                 return input;
             }   
         }

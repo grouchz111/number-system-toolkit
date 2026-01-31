@@ -35,20 +35,40 @@ namespace ConsoleApp1
         public static void RomanBackward()
         {
             string roman = InputHelper.ReadString("Enter a Roman numeral to convert to decimal: ").ToUpper();
-            var map = new Dictionary<char, int> {
-                        {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50},
-                        {'C', 100}, {'D', 500}, {'M', 1000}
-                    };
+
+            var map = new Dictionary<string, int> {
+                    {"M", 1000}, {"CM", 900},
+                    {"D", 500},  {"CD", 400},
+                    {"C", 100},  {"XC", 90},
+                    {"L", 50},   {"XL", 40},
+                    {"X", 10},   {"IX", 9},
+                    {"V", 5},    {"IV", 4},
+                    {"I", 1}
+};
 
             int total = 0;
+
             for (int i = 0; i < roman.Length; i++)
             {
-                int value = map[roman[i]];
-                if (i + 1 < roman.Length && map[roman[i + 1]] > value)
-                    total -= value;
-                else
-                    total += value;
+                // Check for two-character match (e.g., "CM", "IV")
+                if (i + 1 < roman.Length)
+                {
+                    string two = roman.Substring(i, 2);
+                    if (map.ContainsKey(two))
+                    {
+                        total += map[two];
+                        i++; // Skip next character
+                        continue;
+                    }
+                }
+
+                // Single-character match
+                string one = roman[i].ToString();
+                total += map[one];
             }
+
+            Console.WriteLine(total);
+
 
             Console.WriteLine("Decimal: " + total);
             

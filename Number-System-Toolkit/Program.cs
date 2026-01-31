@@ -28,9 +28,10 @@ namespace ConsoleApp1
         {
             var choice = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .Title("Pick a function [green](use ↑↓ arrows, enter to confirm)[/]")
+                    .Title("Pick a function [bold Green1](use ↑↓ arrows, enter to confirm)[/][red]\n(Press Control+C to exit the program)[/]")
                     .PageSize(12)
-                    .MoreChoicesText("[grey](scroll for more functions[/]")  
+                    .MoreChoicesText("[grey](scroll for more functions)[/]")
+                    .HighlightStyle(new Style(foreground: Color.Green1))
                     .AddChoices(
                         "1: Decimal to Binary",
                         "2: Binary to Decimal",
@@ -58,23 +59,23 @@ namespace ConsoleApp1
                     )
             );
 
-            // Exit check — case insensitive, no fancy Contains on span
+            
             if (choice.IndexOf("exit", StringComparison.OrdinalIgnoreCase) >= 0)
             {
-                AnsiConsole.MarkupLine("[bold red]Escaping this dumpster fire. Later.[/]");
+                AnsiConsole.MarkupLine("[bold red]Exiting the Toolkit[/]");
                 Environment.Exit(0);
             }
 
-            // Extract number safely (no Split on whatever-T)
-            var parts = choice.Split(new[] { ':' }, 2);  // split once
+            //split the number from the choice
+            var parts = choice.Split(new[] { ':' }, 2); 
             if (parts.Length < 1 || !int.TryParse(parts[0].Trim(), out int num) || num < 1 || num > 22)
             {
-                AnsiConsole.MarkupLine("[yellow]Dude, that selection is cursed. Pick again.[/]");
-                AnsiConsole.Prompt(new ConfirmationPrompt("Hit enter to continue..."));
+                AnsiConsole.MarkupLine("[yellow]Invalid Selection.[/]");
+                AnsiConsole.Prompt(new ConfirmationPrompt("Hit (or enter) to continue..."));
                 return;
             }
 
-            // Your original switch logic — using the extracted number as string for consistency
+            // Switch
             switch (parts[0].Trim())
             {
                 case "1": BinaryOperations.ConvertToBinaryForward(); break;
