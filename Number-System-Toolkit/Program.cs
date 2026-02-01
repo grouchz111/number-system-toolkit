@@ -7,6 +7,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.TreatControlCAsInput = false;  
+            ExitC();                               
+
             while (true)
             {
                 Menu();
@@ -14,6 +17,14 @@ namespace ConsoleApp1
             }
         }
 
+        
+        public static void ExitC()
+        {
+            Console.CancelKeyPress += (sender, e) =>
+            { 
+                Environment.Exit(0);
+            };
+        }
         public static void Menu()
         {
             Console.Clear(); Console.WriteLine(
