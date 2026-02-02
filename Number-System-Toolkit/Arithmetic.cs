@@ -1,9 +1,9 @@
 ﻿using Spectre.Console;
 using System;
 
-namespace ConsoleApp1
+namespace NumberSystemToolkit
 {
-    class ArithmethicOperations
+    class ArithmeticOperations
     {
         public enum NumberSystem
         {
@@ -22,7 +22,7 @@ namespace ConsoleApp1
             Factorial = 13
         }
 
-        public static void ArithmethicForward()
+        public static void ArithmeticForward()
         {
             var systemChoice = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()

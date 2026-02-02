@@ -1,7 +1,7 @@
 ﻿using System;
 using Spectre.Console;
 
-namespace ConsoleApp1
+namespace NumberSystemToolkit
 {
     class Program
     {
@@ -27,12 +27,7 @@ namespace ConsoleApp1
         }
         public static void Menu()
         {
-            Console.Clear(); Console.WriteLine(
-
-           
-            );
-
-            AnsiConsole.WriteLine();
+            Console.Clear();
         }
 
         static void Selector()
@@ -106,7 +101,7 @@ namespace ConsoleApp1
                 case "15": BijectiveOperations.BijectiveForward(); break;
                 case "16": NBinaryOperations.Forward(); break;
                 case "17": FactorialOperations.FactorialBinForward(); break;
-                case "18": ArithmethicOperations.ArithmethicForward(); break;
+                case "18": ArithmeticOperations.ArithmeticForward(); break;
                 case "19": DecimalDoublesToBinaryOperations.DDTBOForward(); break;
                 case "20": IntShiftOperations.IntShiftMenu(); break;
                 case "21": MedianOperations.MedianForward(); break;
